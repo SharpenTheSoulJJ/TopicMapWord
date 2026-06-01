@@ -71,17 +71,6 @@ body > table > tbody > tr > td:last-child {
     display: none;
 }
 
-@media (max-width: 1250px) {
-    .left-spacer, .right-spacer {
-        display: block;
-        width: 100%;
-    }
-
-    .flexible-spacer-middle,.flexible-spacer {
-        display: none; /* Optionally hide the spacer to reduce gap */
-    }
-}
-
 #rightDiv
 {
     margin-left: auto;
