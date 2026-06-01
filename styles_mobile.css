@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #87CEFA;
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Stack layout vertically on mobile */
+body > table,
+body > table > tbody,
+body > table > tbody > tr {
+    display: block;
+    width: 100%;
+}
+
+body > table > tbody > tr > td {
+    display: block;
+    width: 100%;
+}
+
+.flexible-spacer-middle,
+body > table > tbody > tr > td:last-child {
+    display: none;
+}
+
+.centered-text {
+    text-align: center;
+    margin-left: 0;
+    padding: 4px 8px;
+    color: white;
+    font-size: 12px;
+}
+
+/* Button grid */
+#myTable {
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    background: rgba(70, 130, 180, 0.2);
+}
+
+#myTable td {
+    border: 1px solid rgba(176, 196, 222, 0.7);
+    text-align: center;
+    background: rgba(173, 216, 230, 0.5);
+    padding: 1px;
+}
+
+button {
+    height: 60px;
+    width: 90px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    background: rgba(30, 144, 255, 0.5);
+    border: 1px solid rgba(30, 144, 255, 0.7);
+    line-height: 1.15;
+    padding: 4px;
+    text-align: center;
+    font-size: 11px;
+}
+
+/* Right panel below the button grid */
+.right-spacer {
+    width: 100%;
+}
+
+#rightDiv {
+    margin-top: 8px;
+    height: 55vw;
+    min-height: 260px;
+    max-height: 420px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+#imageFrame {
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+#buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    background: transparent;
+}
+
+#buttonContainer table {
+    margin-top: 4px;
+    margin-bottom: 6px;
+    border-collapse: collapse;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+#buttonContainer td {
+    border: 1px solid transparent;
+    text-align: center;
+    background: transparent;
+}
+
+#backbtn, #goToPaymentPage {
+    background-color: rgba(33, 102, 172, 0.8);
+    width: 110px;
+    height: 44px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: white;
+    border: 1px solid rgba(33, 102, 172, 0.9);
+    min-width: 80px;
+    min-height: 40px;
+    font-size: 14px;
+}
+
+#homebtn, #paypalbtn {
+    display: none;
+}
+
+#MenuBtn {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    min-width: 60px;
+    min-height: 36px;
+}
+
+table {
+    border-collapse: collapse;
+    background: transparent;
+}
+
+td {
+    vertical-align: top;
+}

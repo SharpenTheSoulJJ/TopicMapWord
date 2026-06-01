@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Table</title>
+    <link rel="stylesheet" type="text/css" href="styles_mobile.css" media="screen and (max-width: 940px)">
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen and (min-width: 941px)">
+</head>
+<body>
+   <button type="button" id="homebtn">Home</button>
+   <div class="centered-text">
+                Click a button or an image multiple times to see more scriptures.
+   </div>
+   <table>
+    <tr>
+        <td class="left-spacer">
+            <table id="myTable">
+                <!-- Table rows and cells will be added here from script -->
+            </table>
+        </td>
+        <td class="flexible-spacer-middle"></td>
+        <td class="right-spacer">
+            <div id="rightDiv">
+                <div id="imageFrame"></div>
+                <div id="buttonContainer">
+                        <table>
+                            <tr>
+                                <td>
+                                    <button id="backbtn"></button>
+                                </td>
+                            </tr>
+                            <tr style="display: none;">
+                                <td>
+                                    <button id="goToPaymentPage">Donate</button>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                </div>
+            
+            </div>
+        </td>
+        <td class=" "></td>
+    </tr>
+   </table>
+   <footer id="pageFooter">
+    @TopicMapWord - contact: jjloubser.symbioses@gmail.com
+   </footer>
+    <script src="script.js"></script>
+</body>
+</html>

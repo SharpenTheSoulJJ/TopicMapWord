@@ -1,0 +1,371 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #87CEFA;
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+table {
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: auto;
+    border-collapse: collapse;
+    box-shadow: 0 6px 12px transparent;
+    border-radius: 15px;
+    background: transparent;
+    width: 100%;
+}
+
+body > table {
+    width: 100%;
+}
+
+body > table > tbody > tr {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    column-gap: 15px;
+}
+
+
+.centered-text {
+    text-align: left; 
+    vertical-align: left; 
+    margin-left: 56px;
+    color: white;
+}
+
+.left-spacer {
+    width: auto; 
+}
+
+
+.flexible-spacer-middle {
+    width: 5px; /* Reduce the width significantly to decrease the gap */
+    min-width: 5px; /* Ensure it does not become wider than necessary */
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+.right-spacer {
+    width: auto;
+    min-width: 0;
+}
+
+
+.flexible-spacer {
+    flex: 1; 
+}
+
+body > table > tbody > tr > td.flexible-spacer-middle,
+body > table > tbody > tr > td:last-child {
+    display: none;
+}
+
+@media (max-width: 1250px) {
+    .left-spacer, .right-spacer {
+        display: block;
+        width: 100%;
+    }
+
+    .flexible-spacer-middle,.flexible-spacer {
+        display: none; /* Optionally hide the spacer to reduce gap */
+    }
+}
+
+#rightDiv
+{
+    margin-left: auto;
+    margin-right: 0;
+    height: calc(100vh - 40px);
+    min-height: 500px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+#imageFrame {
+    margin: 0px auto 0px auto;
+    display: block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 16px transparent;
+    border-radius: 15px;
+    background: transparent;
+    position: relative; 
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+#myTable {
+    margin-left: 0;
+    margin-right: auto;
+    width: auto;
+    left: 0;
+    top: 0 ;
+    border-collapse: collapse;
+    border-radius: 10px;
+    background: rgba(70, 130, 180, 0.2);
+    margin-bottom: auto; 
+}
+
+td {
+    vertical-align: top;
+}
+
+#myTable td {
+    border: 1px solid rgba(176, 196, 222, 0.7);
+    width: 20%;
+    height: 2.1vh;
+    text-align: center;
+    background: rgba(173, 216, 230, 0.5);
+}
+
+button {
+    height: 72px;
+    width: 115px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    background: rgba(30, 144, 255, 0.5);
+    border: 1px solid rgba(30, 144, 255, 0.7);
+    line-height: 1.15; 
+    padding: 5px; 
+    text-align: center;
+    font-size: 12px;
+}
+
+
+#buttonContainer td {
+    border: 1px solid transparent;
+    text-align: center;
+    background: transparent;
+}
+
+#buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    text-align: center; 
+    background: transparent;
+}
+
+#buttonContainer table {
+    margin-top: 5px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    background: rgba(70, 130, 180, 0.2);
+    margin-bottom: 10px; 
+    border: 1px solid transparent;
+    background: transparent;
+}
+
+
+
+#payment-form, #paymentConfirmation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+
+#MenuBtn {
+    margin-top: 10px;
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    gap: 10px; 
+    min-width: 80px;
+    min-height: 40px;
+}
+
+
+
+#backbtn, #goToPaymentPage {
+    background-color: rgba(33, 102, 172, 0.8);
+    width: 120px; 
+    height: 5vh; 
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: white;
+    border: 1px solid rgba(33, 102, 172, 0.9);
+    min-width: 80px;
+    min-height: 40px;
+}
+
+#homebtn, #paypalbtn {
+    margin-top: 2px;
+    background-color: rgba(33, 102, 172, 0.8);
+    width: 3%; 
+    height:3vh; 
+    min-width: 80px;
+    min-height: 40px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: white;
+    border: 1px solid rgba(33, 102, 172, 0.9);
+    display: none;
+}
+
+@media (max-height: 760px) {
+    #myTable {
+        width: 440px;
+    }
+
+    button {
+        width: 88px;
+        height: 68px;
+        padding: 6px;
+        line-height: 1.2;
+    }
+
+    #rightDiv {
+        height: calc(100vh - 84px);
+    }
+
+    #imageFrame {
+        height: min(620px, calc(100vh - 190px));
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 1200px) {
+    body > table > tbody > tr {
+        display: block;
+    }
+
+    body > table > tbody > tr > td {
+        display: block;
+        width: 100%;
+    }
+
+    .flexible-spacer-middle {
+        display: none;
+    }
+
+    #rightDiv {
+        margin-top: 10px;
+    }
+
+    .centered-text {
+        margin-left: 12px;
+    }
+}
+
+#payment-form label, #paymentConfirmation h2 {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#payment-form input[type="number"],
+#payment-form input[type="text"] {
+    width: calc(100% - 2px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#payment-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    height: 80px;
+}
+
+#payment-form button:hover {
+    background-color: #45a049;
+}
+
+.donation-message {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 90%;
+    margin: 20px auto;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.donation-message h2 {
+    margin-top: 0;
+}
+
+.donation-message p {
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+.spinner {
+    border: 4px solid rgba(0,0,0,0.1); 
+    border-top: 4px solid #000; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    color: #000; 
+    font-weight: bold; 
+}
+
+#pageFooter {
+    position: fixed; 
+    bottom: 0; 
+    right: 0; 
+    background-color: rgba(33, 102, 172, 0.8); 
+    color: white; 
+    padding: 5px; 
+    margin: 5px; 
+    border-radius: 4px; 
+    font-size: 0.6em;
+}
+
+#shareIcon {
+    display: block; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+#shareIcon img {
+    width: 14px; 
+    height: auto; 
+}
