@@ -71,6 +71,10 @@ body > table > tbody > tr > td:last-child {
     display: none;
 }
 
+body > table > tbody > tr > td {
+    min-width: 0;
+}
+
 #rightDiv
 {
     margin-left: auto;

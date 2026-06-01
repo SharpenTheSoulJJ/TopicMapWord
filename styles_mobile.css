@@ -28,7 +28,6 @@ body > table > tbody > tr {
 
 body > table > tbody > tr > td {
     display: block;
-    width: 100%;
     min-width: 0;
 }
 
