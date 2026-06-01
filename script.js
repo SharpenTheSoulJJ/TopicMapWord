@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					
 					if ((i === 3) && (j === 0)) {
                         button.innerHTML = "Live by Faith <br> &#129495;&#127940;&#128170;"; // Emoji represented using HTML entities
-                        buttonColor = 'rgb(0, 0, 255)'; // blue
+                        buttonColor = 'rgb(104, 209, 209)'; // blue
                         lastImage["LivebyFaith"] = 28;
                     }
 					
