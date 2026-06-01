@@ -327,7 +327,7 @@ function downloadImage(imageUrl) {
 function showDefaultImage()
 {
     try {
-    const imageName = `welcome.PNG`;
+    const imageName = `welcome.png`;
 
     const imageFrame = document.getElementById("imageFrame");
 
